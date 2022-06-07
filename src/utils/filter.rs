@@ -181,7 +181,7 @@ impl Expression {
         }
     }
 
-    fn to_result(self) -> Result<Self, ExpressionError> {
+    fn into_result(self) -> Result<Self, ExpressionError> {
         if let Some(error) = self.error() {
             Err(error)
         } else {
@@ -321,7 +321,7 @@ impl TryFrom<&str> for Expression {
         }
 
         expr.push_op_stack(operators);
-        expr.to_result()
+        expr.into_result()
    }
 }
 

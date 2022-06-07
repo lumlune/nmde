@@ -14,12 +14,10 @@ use {
 
 /*
  * TODO:
+ *
  * ~ Add size field
  * ~ Indicate failure when out of IDs in `transform` functions
- *
- * NOTE:
- * ~ In hindsight `impl Default` on the associated data was better than this
- * mess
+ * ~ Make `transform` functions belong to the trait
  */
 
 #[derive(Default, Serialize, Deserialize)]
